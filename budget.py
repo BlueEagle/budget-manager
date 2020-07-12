@@ -17,4 +17,14 @@ def getPercentAvailability():
     availability -= budget[budgetItem]
   return availability
 
-print(getPercentAvailability())
+def percentOf(percent, value):
+  value = float(percent) * float(value) / float(100)
+  return value
+
+def getAvailability():
+  return percentOf(getPercentAvailability(), income)
+
+
+
+
+print(getDollarValue(getAvailability()))
