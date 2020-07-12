@@ -10,10 +10,11 @@ def getDollarValue(value): # returns string dollar value
   value = f"${dollars}.{cents}"
   return value
 
-print(budget)
 
-
-def getBudgetAvailability():
-  availability = 0
-  
+def getPercentAvailability():
+  availability = 100
+  for budgetItem in budget:
+    availability -= budget[budgetItem]
   return availability
+
+print(getPercentAvailability())
