@@ -1,5 +1,5 @@
 income = 120.00
-
+budget = {"tithing": 10, "savings": 50, "personal":10}
 
 def getDollarValue(value): # returns string dollar value
   value = str(int(value * 100))
@@ -10,4 +10,10 @@ def getDollarValue(value): # returns string dollar value
   value = f"${dollars}.{cents}"
   return value
 
-print(f'{getDollarValue(income)}')
+print(budget)
+
+
+def getBudgetAvailability():
+  availability = 0
+  
+  return availability
