@@ -34,6 +34,7 @@ def addBudgetItem():
   clear()
   itemName = input('Enter the name of the budget item to add (or quit): ')
   print(f"working on adding {itemName}...")
+  # input("\nPress ENTER to continue...")
 
 def displayOverview():
   print(f"Starting with a total of {getDollarValue(income)}.")
@@ -66,7 +67,7 @@ def menu():
     # print(f"User selected: {userSelection}")
 
     if (isAny(userSelection.lower(), '1', 'add')):
-      print('adding budget item!')
+      addBudgetItem()
     elif (isAny(userSelection.lower(), '2', 'remove')):
       print('removing budget item!')
     elif (isAny(userSelection.lower(), '3', 'modify')):
