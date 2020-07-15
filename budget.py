@@ -33,8 +33,20 @@ def getAvailability():
 def addBudgetItem():
   clear()
   itemName = input('Enter the name of the budget item to add (or quit): ')
-  print(f"working on adding {itemName}...")
-  # input("\nPress ENTER to continue...")
+  clear()
+  print(f'You are creating a budget item for: {itemName}\n\n')
+  print(f'Please select one of the following options:\n')
+  print("p - enter budget percent")
+  print("d - enter budget dollar amount")
+  print("q - quit")
+  userSelection = input("\nPease select an option: ")
+  if (isAny(userSelection.lower(), 1, 'p', 'percent')):
+    print('do percent stuff...')
+  elif (isAny(userSelection.lower(), 2, 'd', 'dollar', 'dollars')):
+    print('do dollars stuff')
+  else:
+    print('I don\'t know what you want!')
+
 
 def displayOverview():
   print(f"Starting with a total of {getDollarValue(income)}.")
@@ -56,9 +68,9 @@ def menu():
     clear()
     displayOverview()
     print("\n\nMenu (use numbers or keywords):")
-    print("1. (add) a budget item.")
-    print("2. (remove) a budget item.")
-    print("3. (modify) a budget item.")
+    print("1. (a)dd a budget item.")
+    print("2. (r)emove a budget item.")
+    print("3. (m)odify a budget item.")
     print("4. (q)uit.")
   
   while(True):
@@ -66,11 +78,11 @@ def menu():
     userSelection = input('\nPlease select an option: ')
     # print(f"User selected: {userSelection}")
 
-    if (isAny(userSelection.lower(), '1', 'add')):
+    if (isAny(userSelection.lower(), '1', 'add', 'a')):
       addBudgetItem()
-    elif (isAny(userSelection.lower(), '2', 'remove')):
+    elif (isAny(userSelection.lower(), '2', 'remove', 'r')):
       print('removing budget item!')
-    elif (isAny(userSelection.lower(), '3', 'modify')):
+    elif (isAny(userSelection.lower(), '3', 'modify', 'm')):
       print('modifying budget item!')
     elif (isAny(userSelection.lower(), '4', 'q', 'quit')):
       print('quitting...')
