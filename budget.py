@@ -39,7 +39,7 @@ def addBudgetItem():
   print("p - enter budget percent")
   print("d - enter budget dollar amount")
   print("q - quit")
-  userSelection = input("\nPease select an option: ")
+  userSelection = input("\nPlease select an option: ")
   if (isAny(userSelection.lower(), 1, 'p', 'percent')):
     print('do percent stuff...')
   elif (isAny(userSelection.lower(), 2, 'd', 'dollar', 'dollars')):
@@ -68,10 +68,10 @@ def menu():
     clear()
     displayOverview()
     print("\n\nMenu (use numbers or keywords):")
-    print("1. (a)dd a budget item.")
-    print("2. (r)emove a budget item.")
-    print("3. (m)odify a budget item.")
-    print("4. (q)uit.")
+    print("a - add a budget item.")
+    print("r - remove a budget item.")
+    print("m - modify a budget item.")
+    print("q - quit.")
   
   while(True):
     displayMenuOptions()
